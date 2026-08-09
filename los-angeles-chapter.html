@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  GNOSIS SAMAEL LAKHSMI — BUFFALO CHAPTER
+  Styled to match the international site (gnosis-samael-lakhsmi.org):
+  light/white theme, Playfair Display serif, gold bullseye, painting hero.
+  ============================================================================
+  TO RETARGET FOR ANOTHER CITY, change ONLY:
+    1. Every city string: "Los Angeles" / "Los Angeles, California" / "Southern California" / "CA"
+    2. <title>, meta description, canonical, og: tags
+    3. JSON-LD (name, url, areaServed, address, sameAs)
+    4. FORMSPREE endpoint (new form per city) | Facebook URL | local email
+    5. Domain (lagnosis.org -> your city domain)
+
+  HERO PAINTING: set --hero-image below to the chapter's hero painting URL
+  (ideally the same slider image used on the international site, or another
+  public-domain symbolist work). A warm gradient shows until then.
+
+  LOGO: loaded live from the international site. To self-host, download
+  logo.png and repoint the two <img src> tags to a local path.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============ LOCAL SEO ============ -->
+<title>Gnosis Samael Lakhsmi — Los Angeles Chapter | Gnostic Teachings in Los Angeles, CA</title>
+<meta name="description" content="The Los Angeles, California chapter of Gnosis Samael Lakhsmi International — the practical Gnostic teachings of Samael Aun Weor. Free study, meditation, and the Gnosis Course. All sincere seekers in Southern California welcome." />
+<meta name="keywords" content="Gnosis Los Angeles, Gnostic teachings Los Angeles, Samael Aun Weor Los Angeles, Gnosis Samael Lakhsmi Los Angeles, Gnostic study group LA, meditation Los Angeles, esoteric school Southern California" />
+<link rel="canonical" href="https://www.lagnosis.org/" />
+
+<!-- ============ OPEN GRAPH ============ -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Gnosis Samael Lakhsmi — Los Angeles Chapter" />
+<meta property="og:description" content="The Los Angeles, California chapter of Gnosis Samael Lakhsmi International. The Gnostic teachings of Samael Aun Weor." />
+<meta property="og:url" content="https://www.lagnosis.org/" />
+<meta property="og:site_name" content="Gnosis Samael Lakhsmi — Los Angeles Chapter" />
+<meta property="og:image" content="https://gnosis-samael-lakhsmi.org/wp-content/uploads/2025/11/logo.png" />
+<meta name="twitter:card" content="summary" />
+
+<!-- ============ STRUCTURED DATA: chapter of the international org ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Gnosis Samael Lakhsmi — Los Angeles Chapter",
+  "url": "https://www.lagnosis.org/",
+  "description": "The Los Angeles, California chapter of Gnosis Samael Lakhsmi International, transmitting the Gnostic teachings of Samael Aun Weor.",
+  "email": "lagnosis@gmail.com",
+  "logo": "https://gnosis-samael-lakhsmi.org/wp-content/uploads/2025/11/logo.png",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Associação Cultural Gnóstica Samael Lakhsmi",
+    "alternateName": "Gnosis Samael Lakhsmi International",
+    "url": "https://gnosis-samael-lakhsmi.org/",
+    "foundingDate": "2008"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Los Angeles",
+    "containedInPlace": { "@type": "State", "name": "California" }
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Los Angeles",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://gnosis-samael-lakhsmi.org/",
+    "https://www.facebook.com/groups/REPLACE_WITH_FB_GROUP"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --paper:#ffffff;
+    --paper-2:#f6f5f2;
+    --panel:#ececec;
+    --ink:#1c1a17;
+    --ink-soft:#5c5852;
+    --gold:#c99a2e;
+    --gold-deep:#a67c1e;
+    --gold-btn:#efab2c;
+    --line:#e4e1db;
+    --maxw:1180px;
+    /* Set this to the chapter's hero painting URL. Warm gradient shows until then. */
+    --hero-image:none;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;font-size:1.06rem;line-height:1.75;-webkit-font-smoothing:antialiased}
+  a{color:var(--gold-deep);text-decoration:none}
+  a:hover{color:var(--gold)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--ink);line-height:1.2;font-weight:700}
+  .script{font-family:'Pinyon Script',cursive;font-weight:400}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:88px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand .mark{width:46px;height:46px;flex:none}
+  .brand .txt{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;letter-spacing:.02em;color:var(--ink);line-height:1}
+  .brand .txt small{display:block;font-family:'EB Garamond',serif;font-weight:400;font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-deep);margin-top:5px}
+  .menu{display:flex;align-items:center;gap:34px;list-style:none;font-family:'Playfair Display',serif;font-size:1.06rem}
+  .menu > li{position:relative}
+  .menu a{color:var(--ink)}
+  .menu a:hover{color:var(--gold-deep)}
+  .menu .caret{font-size:.7rem;color:var(--gold-deep);margin-left:3px}
+  .dd{position:absolute;top:130%;left:50%;transform:translateX(-50%);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:10px 0;min-width:190px;box-shadow:0 12px 30px rgba(0,0,0,.10);opacity:0;visibility:hidden;transition:.18s}
+  .menu > li:hover .dd{opacity:1;visibility:visible;top:118%}
+  .dd a{display:block;padding:8px 20px;font-size:.98rem;white-space:nowrap}
+  .dd a:hover{background:var(--paper-2)}
+  .menu-btn{display:none;background:none;border:0;color:var(--gold-deep);font-size:1.7rem;cursor:pointer}
+
+  /* Hero */
+  .hero{position:relative;min-height:78vh;display:flex;align-items:center;background-color:#1a1712;
+    background-image:var(--hero-image),
+      radial-gradient(120% 90% at 18% 40%, rgba(94,78,40,.55), transparent 55%),
+      radial-gradient(120% 120% at 90% 60%, rgba(40,52,38,.7), transparent 60%),
+      linear-gradient(120deg,#241f16 0%, #14120d 45%, #1d2419 100%);
+    background-size:cover;background-position:center;color:#fff;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,8,5,.35),transparent 40%,transparent 55%,rgba(10,8,5,.35));pointer-events:none}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;width:100%;padding-top:70px;padding-bottom:70px}
+  .hero-logo{max-width:340px;width:100%;height:auto;filter:drop-shadow(0 8px 30px rgba(0,0,0,.55));margin:0 auto;display:block}
+  .hero-right{text-align:left}
+  .hero blockquote{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.7rem,3.4vw,2.9rem);line-height:1.28;color:#fbf8f1;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+  .hero cite{display:block;margin-top:22px;font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;letter-spacing:.14em;color:#e7cf94;text-transform:uppercase}
+  .hero .eyebrow{font-family:'EB Garamond',serif;font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:#e7cf94;margin-bottom:20px}
+  .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;font-family:'Playfair Display',serif;font-size:.95rem;letter-spacing:.02em;padding:13px 28px;border-radius:3px;cursor:pointer;transition:.2s;border:1px solid var(--gold)}
+  .btn.solid{background:var(--gold-btn);color:#1c1305;border-color:var(--gold-btn);font-weight:600}
+  .btn.solid:hover{background:#f6bb47}
+  .btn.ghost{background:transparent;color:#f3e6c6}
+  .btn.ghost:hover{background:rgba(233,207,148,.14)}
+
+  /* Sections */
+  section{padding:92px 0}
+  .alt{background:var(--paper-2)}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 56px}
+  .section-head .kicker{font-family:'Pinyon Script',cursive;font-size:2rem;color:var(--gold-deep);line-height:1;margin-bottom:6px}
+  .section-head h2{font-size:clamp(1.9rem,3.8vw,2.6rem);margin-bottom:18px}
+  .section-head p{color:var(--ink-soft)}
+  .rule{width:64px;height:2px;background:var(--gold);margin:14px auto 0}
+
+  .two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+  .two-col h2{font-size:2rem;margin-bottom:22px}
+  .two-col p{margin-bottom:18px;color:var(--ink)}
+  .side{background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:34px}
+  .side .kicker{font-family:'Pinyon Script',cursive;font-size:1.7rem;color:var(--gold-deep)}
+  .side p{color:var(--ink-soft);margin-bottom:14px}
+
+  /* Three art cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+  .acard{position:relative;text-align:center;border-right:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column}
+  .acard:last-child{border-right:0}
+  .acard .head{padding:34px 20px 26px}
+  .acard h3{font-size:1.9rem;margin-bottom:8px}
+  .acard .sub{font-family:'Pinyon Script',cursive;font-size:1.5rem;color:var(--ink-soft)}
+  .acard .art{height:230px;background-size:cover;background-position:center;position:relative}
+  .acard .art::before{content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(45deg);width:18px;height:18px;background:var(--paper);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+  .art-articles{background-color:#2a3a52;background-image:linear-gradient(160deg,#3a5f86,#1d2f47 60%,#0f1b2c),radial-gradient(circle at 70% 30%,rgba(233,207,148,.5),transparent 45%)}
+  .art-books{background-color:#2f3620;background-image:linear-gradient(160deg,#5c6b3e,#2f3620 60%,#171c10),radial-gradient(circle at 30% 30%,rgba(233,207,148,.35),transparent 45%)}
+  .art-courses{background-color:#3a2f1e;background-image:linear-gradient(160deg,#6b5330,#3a2f1e 60%,#1c160c),radial-gradient(circle at 60% 40%,rgba(233,207,148,.4),transparent 45%)}
+  .acard a.full{position:absolute;inset:0}
+
+  /* Teachings */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .tcard{text-align:center;padding:36px 26px;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+  .tcard .ico{width:44px;height:44px;color:var(--gold);margin:0 auto 18px}
+  .tcard h3{font-size:1.4rem;margin-bottom:12px}
+  .tcard p{color:var(--ink-soft);font-size:1rem}
+
+  /* Enroll */
+  .enroll-panel{max-width:900px;margin:0 auto;background:var(--panel);border-radius:16px;padding:52px 48px;box-shadow:0 20px 50px rgba(0,0,0,.06)}
+  .enroll-panel h2{text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:2.1rem;margin-bottom:12px}
+  .enroll-panel .lead{text-align:center;color:var(--ink-soft);margin-bottom:38px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .field{margin-bottom:22px}
+  .field label{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.95rem;color:#3a3a3a;margin-bottom:8px}
+  .field input,.field textarea,.field select{width:100%;background:#fff;border:1px solid #d7d5d0;border-radius:6px;color:var(--ink);font-family:'EB Garamond',serif;font-size:1.05rem;padding:14px 16px}
+  .field input::placeholder,.field textarea::placeholder{color:#a9a49c}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold)}
+  .terms{display:flex;align-items:center;gap:10px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.95rem;color:#3a3a3a;margin:6px 0 26px}
+  .subscribe{width:100%;background:var(--gold-btn);color:#1c1305;border:0;border-radius:40px;padding:17px;font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;cursor:pointer;transition:.2s}
+  .subscribe:hover{background:#f6bb47}
+  #form-status{margin-top:16px;text-align:center;font-size:1rem;min-height:1.4em}
+
+  /* Footer */
+  footer{background:var(--paper-2);border-top:1px solid var(--line);padding:56px 0 44px;text-align:center}
+  footer .fmenu{list-style:none;display:flex;gap:26px;justify-content:center;margin-bottom:22px;flex-wrap:wrap;font-family:'Playfair Display',serif;font-size:1rem}
+  footer .fmenu a{color:var(--ink)}
+  footer .fmenu a:hover{color:var(--gold-deep)}
+  footer .copy{color:var(--ink-soft);font-family:'Playfair Display',serif}
+  footer .copy .org{font-style:italic;display:block;margin-top:4px;color:var(--ink)}
+  footer .local{color:var(--ink-soft);font-size:.95rem;margin-top:16px}
+
+  @media(max-width:900px){
+    .menu{display:none;position:absolute;top:88px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 26px}
+    .menu.open{display:flex}
+    .menu > li{width:100%;padding:10px 0;border-bottom:1px solid var(--line)}
+    .dd{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:0;padding:6px 0 0 14px}
+    .menu-btn{display:block}
+    .hero .wrap{grid-template-columns:1fr;text-align:center;gap:30px}
+    .hero-right{text-align:center}
+    .hero-cta{justify-content:center}
+    .hero-logo{max-width:240px}
+    .two-col{grid-template-columns:1fr;gap:34px}
+    .cards{grid-template-columns:1fr;border:1px solid var(--line)}
+    .acard{border-right:0;border-bottom:1px solid var(--line)}
+    .grid3{grid-template-columns:1fr}
+    .frow{grid-template-columns:1fr;gap:0}
+    section{padding:64px 0}
+    .enroll-panel{padding:36px 24px}
+  }
+</style>
+</head>
+<body>
+<a id="top"></a>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Gnosis Samael Lakhsmi Los Angeles Chapter">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="29" fill="none" stroke="#c99a2e" stroke-width="3"/>
+        <circle cx="32" cy="32" r="21" fill="none" stroke="#c99a2e" stroke-width="3"/>
+        <circle cx="32" cy="32" r="13" fill="none" stroke="#c99a2e" stroke-width="3"/>
+        <circle cx="32" cy="32" r="5.5" fill="#c99a2e"/>
+      </svg>
+      <span class="txt">Gnosis Samael Lakhsmi<small>Los Angeles Chapter</small></span>
+    </a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#top">Home</a></li>
+      <li>
+        <a href="#learn">Learn <span class="caret">▾</span></a>
+        <div class="dd">
+          <a href="https://gnosis-samael-lakhsmi.org/articles/" target="_blank" rel="noopener">Articles</a>
+          <a href="https://gnosis-samael-lakhsmi.org/audios/" target="_blank" rel="noopener">Audios</a>
+          <a href="https://gnosis-samael-lakhsmi.org/livros/" target="_blank" rel="noopener">Books</a>
+          <a href="https://gnosis-samael-lakhsmi.org/lista-de-videos/" target="_blank" rel="noopener">Videos</a>
+        </div>
+      </li>
+      <li><a href="https://gnosis-samael-lakhsmi.org/courses-and-events/" target="_blank" rel="noopener">Courses and Events</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#enroll">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-left">
+      <img class="hero-logo" src="https://gnosis-samael-lakhsmi.org/wp-content/uploads/2025/11/logo.png" alt="AEON 13 — Gnosis Samael Lakhsmi" />
+    </div>
+    <div class="hero-right">
+      <div class="eyebrow">Official Chapter · Los Angeles, California</div>
+      <blockquote>"In life, the only thing that matters is a radical, total, and definitive change. The rest, frankly, is of no importance whatsoever."</blockquote>
+      <cite>— V.M. Samael Aun Weor</cite>
+      <div class="hero-cta">
+        <a href="#enroll" class="btn solid">Enroll in the Gnosis Course</a>
+        <a href="#about" class="btn ghost">Study in Los Angeles</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE ART CARDS -->
+<section style="padding:0">
+  <div class="cards">
+    <div class="acard">
+      <div class="head"><h3>Articles</h3><div class="sub">Learn more</div></div>
+      <div class="art art-articles"></div>
+      <a class="full" href="https://gnosis-samael-lakhsmi.org/articles/" target="_blank" rel="noopener" aria-label="Articles"></a>
+    </div>
+    <div class="acard">
+      <div class="head"><h3>Books</h3><div class="sub">Read online</div></div>
+      <div class="art art-books"></div>
+      <a class="full" href="https://gnosis-samael-lakhsmi.org/livros/" target="_blank" rel="noopener" aria-label="Books"></a>
+    </div>
+    <div class="acard">
+      <div class="head"><h3>Courses</h3><div class="sub">Participate</div></div>
+      <div class="art art-courses"></div>
+      <a class="full" href="https://gnosis-samael-lakhsmi.org/courses-and-events/" target="_blank" rel="noopener" aria-label="Courses"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="kicker script">Who we are</div>
+        <h2>The Los Angeles chapter of an international school</h2>
+        <p>We are the Los Angeles, California chapter of the <strong>Associação Cultural Gnóstica Samael Lakhsmi</strong> — a non-profit institution founded in 2008, with its international seat at the AEON 13 Monastery on Mount Olympus, Greece.</p>
+        <p>Our mission is the one shared by every chapter of the school: to transmit, faithfully and completely, the Gnostic teachings in the tradition of the Great Master Samael Aun Weor, who established the modern Gnostic Movement in the 1950s.</p>
+        <p>Here in Los Angeles, that mission becomes local — a place for people in Southern California to study, practice, and begin the work of a radical, total, and definitive change.</p>
+      </div>
+      <div class="side">
+        <div class="kicker script">The foundation</div>
+        <p style="margin-top:6px"><strong style="color:var(--ink)">Gnosis</strong> means direct experience of the truth — not belief, not theory, but living knowledge of the Real. It is the practical science of awakening consciousness, transmuting energy, and dissolving the ego that is the root of our suffering.</p>
+        <p>The teachings are freely given. What is asked is not money or belief — only sincerity, and the willingness to do the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHINGS -->
+<section id="learn" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker script">The work</div>
+      <h2>The Three Factors of the Revolution of Consciousness</h2>
+      <p>The complete path rests on three inseparable factors. Remove one and the triangle collapses.</p>
+      <div class="rule"></div>
+    </div>
+    <div class="grid3">
+      <div class="tcard">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+        <h3>To Die</h3>
+        <p>The dissolution of the ego — the pluralized "I," the defects of anger, pride, lust, and fear — through self-observation and the help of the Divine Mother.</p>
+      </div>
+      <div class="tcard">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l3 6 6 .8-4.5 4.2 1.2 6L12 22"/><path d="M12 2L9 8l-6 .8 4.5 4.2L6.3 19 12 22"/></svg>
+        <h3>To Be Born</h3>
+        <p>The creation of the Solar Bodies through the transmutation of the creative energy — the Second Birth, the vehicle through which the Being can manifest.</p>
+      </div>
+      <div class="tcard">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+        <h3>To Sacrifice</h3>
+        <p>Compassion in action — the return of the awakened to help those who still sleep. Without this, the work turns selfish and the path closes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BUFFALO -->
+<section>
+  <div class="wrap">
+    <div class="section-head" style="max-width:780px">
+      <div class="kicker script">Why Los Angeles</div>
+      <h2>The teaching, close to home</h2>
+      <p>The Los Angeles chapter exists to bring the work of the international school to Southern California — to gather the people here who feel there is more to life than what meets the eye, and who are ready to begin. Whether you are new to Gnosis or have studied for years, there is a place for you here. Enroll below to connect with the chapter and learn where and when we meet.</p>
+      <div class="rule"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLL -->
+<section id="enroll" class="alt">
+  <div class="wrap">
+    <div class="enroll-panel">
+      <h2>Enroll for Gnosis Course</h2>
+      <p class="lead">Participate in courses, receive newsletters, and much more!</p>
+      <!-- Wired to a local Formspree so the Los Angeles chapter receives enrollments.
+           Create a form at formspree.io and paste its ID below.
+           To route to the international school instead, change `action` to their endpoint. -->
+      <form id="enroll-form" action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST">
+        <div class="frow">
+          <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Name" required /></div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="Email" required /></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="city">City</label><input type="text" id="city" name="city" placeholder="Los Angeles, CA" /></div>
+          <div class="field"><label for="whatsapp">WhatsApp (Optional)</label><input type="text" id="whatsapp" name="whatsapp" placeholder="(Country code) + phone" /></div>
+        </div>
+        <div class="field"><label for="message">Message (Optional)</label><textarea id="message" name="message" rows="4"></textarea></div>
+        <label class="terms"><input type="checkbox" required /> You agree to our terms and conditions.</label>
+        <button type="submit" class="subscribe">Subscribe</button>
+        <div id="form-status"></div>
+      </form>
+      <p style="text-align:center;margin-top:22px;color:var(--ink-soft);font-size:.98rem">
+        Or email the chapter directly: <a href="mailto:lagnosis@gmail.com">lagnosis@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <ul class="fmenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#learn">Learn</a></li>
+      <li><a href="#enroll">Enroll</a></li>
+      <li><a href="https://gnosis-samael-lakhsmi.org/" target="_blank" rel="noopener">International Site</a></li>
+      <li><a href="https://www.facebook.com/groups/REPLACE_WITH_FB_GROUP" target="_blank" rel="noopener">Facebook</a></li>
+    </ul>
+    <p class="copy">© Copyright <span id="yr"></span>. All Rights Reserved to <span class="org">GNOSIS - Samael Lakhsmi</span></p>
+    <p class="local">Los Angeles Chapter · Gnostic teachings in Los Angeles, California · In the tradition of Samael Aun Weor</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const form = document.getElementById('enroll-form');
+  const status = document.getElementById('form-status');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.style.color = '#5c5852'; status.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+      if (res.ok){ form.reset(); status.style.color = '#a67c1e'; status.textContent = 'Thank you. The Los Angeles chapter will be in touch soon.'; }
+      else { status.style.color = '#b3462f'; status.textContent = 'Something went wrong. Please email us directly.'; }
+    } catch { status.style.color = '#b3462f'; status.textContent = 'Network error. Please email us directly.'; }
+  });
+</script>
+</body>
+</html>
